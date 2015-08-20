@@ -39,7 +39,7 @@ handler.on("push", function(evt) {
 
     if(branches.contains(branch)) {
         console.log("Triggering '"+branch+"' build...");
-        request.post(circleEndpoint + "/project/contentools/platform-build/tree/" + branch + "?circle-token=" + circleToken);
+        request.post(circleEndpoint + "/project/"+projectName+"/tree/" + branch + "?circle-token=" + circleToken);
 
     } else {
         console.log("Nothing to do with the given branch.");
